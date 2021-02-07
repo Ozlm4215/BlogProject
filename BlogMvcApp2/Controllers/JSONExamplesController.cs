@@ -140,7 +140,7 @@ namespace BlogMvcApp2.Controllers
         }
 
 
-        // Auth Basic
+        // Auth Basic --
         //var authenticationBytes = Encoding.ASCII.GetBytes("YourUsername:YourPassword");
         //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
         //Convert.ToBase64String(authenticationBytes));
