@@ -17,7 +17,7 @@ namespace BlogMvcApp2.Controllers
         [HttpGet]
         public ActionResult Posts()
         {
-            
+
             return View(GetPosts());
         }
 
@@ -46,8 +46,8 @@ namespace BlogMvcApp2.Controllers
             List<Post> posts = new List<Post>();
             using (var client = new HttpClient())
             {
-               var content = client.GetStringAsync("https://jsonplaceholder.typicode.com/posts").Result;
-              posts =  Newtonsoft.Json.JsonConvert.DeserializeObject<List<Post>>(content);
+                var content = client.GetStringAsync("https://jsonplaceholder.typicode.com/posts").Result;
+                posts = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Post>>(content);
             }
             return posts;
         }
@@ -63,7 +63,7 @@ namespace BlogMvcApp2.Controllers
             {
                 //Auth Token Gönderme
                 //client.DefaultRequestHeaders.Add("Authorization", "Bearer " + "dssddsdadadasdasdad");
-
+                // mmmmmm
                 // Auth Basic
                 //var authenticationBytes = Encoding.ASCII.GetBytes("YourUsername:YourPassword");
                 //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
@@ -79,7 +79,7 @@ namespace BlogMvcApp2.Controllers
                 var reads = content.Content.ReadAsStringAsync().Result;
             }
             return View();
-    
+
 
         }
 
@@ -112,9 +112,9 @@ namespace BlogMvcApp2.Controllers
 
         }
 
-        public ActionResult Update(int Id) 
+        public ActionResult Update(int Id)
         {
-            var gelen = GetPosts().Where(p=>p.id== Id).FirstOrDefault();
+            var gelen = GetPosts().Where(p => p.id == Id).FirstOrDefault();
             return View(gelen);
         }
 
@@ -135,8 +135,9 @@ namespace BlogMvcApp2.Controllers
 
 
             return View();
-           
+
 
         }
-       
+
+    }
 }
